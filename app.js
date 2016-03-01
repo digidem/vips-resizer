@@ -3,7 +3,6 @@ var logger = require('morgan')
 var request = require('request')
 var sharp = require('sharp')
 var pump = require('pump')
-var assign = require('object-assign')
 var debug = require('debug')('vips-resizer:app')
 
 var validateUrl = require('./lib/validate')
