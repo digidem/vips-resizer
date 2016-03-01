@@ -28,7 +28,7 @@ var REQUEST_TIMEOUT = 30 * 1000 // 30 seconds
 app.get(pathRegExp, function (req, res, next) {
   var w = req.params[0] || MAX_WIDTH
   var h = req.params[1] || w
-  var q = req.params[2] || 80
+  var q = req.params[2] || 70
   var url = req.params[3]
 
   var isValidUrl = validateUrl(url, app.get('whitelist') || WHITELIST)
