@@ -28,5 +28,14 @@
     "pump": "^1.0.1",
     "request": "^2.69.0",
     "sharp": "^0.13.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digidem/vips-resizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digidem/vips-resizer/issues"
+  },
+  "homepage": "https://github.com/digidem/vips-resizer#readme"
 }
