@@ -49,7 +49,7 @@ app.get(pathRegExp, function (req, res, next) {
     .withoutEnlargement() // Do not enlarge images smaller than `w` & `h`
     .rotate() // Rotate image according to EXIF metadata (e.g. images from phones)
     .quality(q) // JPEG quality setting
-    .sequentialRead() // Set VIPS_ACCESS_SEQUENTIAL, reducing memory usage
+    // .sequentialRead() // Set VIPS_ACCESS_SEQUENTIAL, reducing memory usage
     .limitInputPixels(MAX_INPUT_PIXELS) // Do not process images > MAX_INPUT_PIXELS
     .on('error', next)
 
