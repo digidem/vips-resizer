@@ -20,7 +20,7 @@ WHITELIST="mydomain.com,s3.amazonaws.com/mybucket" npm start
 
 ## API
 
-### GET `/[width]/[height]/[quality]/image_url`
+### GET `/[width/][height/][quality/]imageUrl`
 
 Resize an image to fit within `width` and `height` at `quality`. If `height` is omitted it is the same as `width`. If `quality` is omitted the default is `70`. If `width`, `height` and `quality` are omitted they default to `MAX_WIDTH` which is 4000px by default.
 
