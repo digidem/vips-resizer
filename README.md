@@ -12,7 +12,7 @@ npm install
 
 ## Start
 
-By default all domains are blacklisted. You need to pass a list of whitelisted URLs from which to process images. E.g.
+By default this will resize images from any domain. To only allow images from certain domains to be resized, pass a comma-separated list of whitelisted URLs from which to process images. E.g.
 
 ```sh
 WHITELIST="mydomain.com,s3.amazonaws.com/mybucket" npm start
