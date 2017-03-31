@@ -27,7 +27,7 @@
     "morgan": "^1.7.0",
     "pump": "^1.0.1",
     "request": "^2.69.0",
-    "sharp": "^0.16.0"
+    "sharp": "^0.17.2"
   },
   "devDependencies": {},
   "repository": {
