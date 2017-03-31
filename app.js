@@ -7,7 +7,7 @@ var debug = require('debug')('vips-resizer:app')
 
 var validateUrl = require('./lib/validate')
 var errorStatusCodes = require('./lib/errors')
-var pathRegExp = require('./lib/path_regexp')
+var regExp = require('./lib/regexp')
 
 var app = express()
 
@@ -25,15 +25,22 @@ var MAX_QUALITY = 90
 var MAX_INPUT_PIXELS = 24 * 1000 * 1000 // 24MP
 var REQUEST_TIMEOUT = 30 * 1000 // 30 seconds
 
-app.get(pathRegExp, function (req, res, next) {
+app.get(regExp.path, function (req, res, next) {
   var w = req.params[0] || MAX_WIDTH
   var h = req.params[1] || w
   var q = req.params[2] || 70
-  var url = req.params[3]
+  var url = req.params[3] || req.query.url
+  var err
+
+  if (!url) {
+    err = new Error('Missing url')
+    err.status = 400
+    return next(err)
+  }
 
   var isValidUrl = validateUrl(url, app.get('whitelist') || WHITELIST)
   if (!isValidUrl) {
-    var err = new Error('Image domain is forbidden (does not match whitelist)')
+    err = new Error('Image domain is forbidden (does not match whitelist)')
     err.status = 403
     return next(err)
   }
@@ -92,3 +99,4 @@ app.use(function (err, req, res, next) {
 })
 
 module.exports = app
+module.exports.resize = app
