@@ -1,6 +1,7 @@
 var express = require('express')
 var logger = require('morgan')
 var request = require('request')
+var cors = require('cors')
 var sharp = require('sharp')
 var pump = require('pump')
 var debug = require('debug')('vips-resizer:app')
@@ -15,6 +16,7 @@ var app = express()
 app.use(logger('dev', {
   skip: function (req, res) { return res.statusCode < 400 }
 }))
+app.use(cors())
 
 var WHITELIST = process.env.WHITELIST
 var MAX_WIDTH = 4000
