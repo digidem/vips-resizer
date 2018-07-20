@@ -24,11 +24,11 @@
   "dependencies": {
     "cors": "^2.8.4",
     "debug": "^2.2.0",
-    "express": "^4.13.4",
-    "morgan": "^1.7.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
     "pump": "^1.0.1",
-    "request": "^2.69.0",
-    "sharp": "^0.17.2"
+    "request": "^2.87.0",
+    "sharp": "^0.20.5"
   },
   "devDependencies": {},
   "repository": {
