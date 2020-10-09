@@ -3,8 +3,8 @@
   "description": "Fast streaming image resizer API using libvips",
   "version": "2.2.0",
   "engines": {
-    "node": "4.3.1",
-    "npm": "3.7.x"
+    "node": "10",
+    "npm": "6"
   },
   "main": "app.js",
   "scripts": {
